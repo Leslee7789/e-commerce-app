@@ -1,4 +1,6 @@
 import 'package:ecommerce_app/pages/bottomnav.dart';
+import 'package:ecommerce_app/pages/cart_page.dart';
+import 'package:ecommerce_app/pages/shop_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,6 +18,12 @@ void navigateBottomBar(int index){
     selectedIndex =index;
   });
 }
+//pages we are goint to display.a shop page and a cart page
+final List <Widget> pages =[
+  ShopPage(),
+
+  CartPage(),
+];
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +31,7 @@ void navigateBottomBar(int index){
       bottomNavigationBar: Bottomnav(
         onTap:(index) => navigateBottomBar(index),
       ),
+      body: pages[selectedIndex],//this will take you to the pages when you press the bottom nav
     );
   }
 }

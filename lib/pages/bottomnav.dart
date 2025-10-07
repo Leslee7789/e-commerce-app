@@ -11,7 +11,7 @@ class Bottomnav extends StatelessWidget {
         onTap:(value) =>  onTap!(value),
         items:[
           BottomNavigationBarItem(icon: Icon(Icons.home),label: 'home'),
-           BottomNavigationBarItem(icon: Icon(Icons.home),label: 'home'),
+           BottomNavigationBarItem(icon: Icon(Icons.shopping_bag_rounded),label: 'cart'),
    
           ],
           ),
