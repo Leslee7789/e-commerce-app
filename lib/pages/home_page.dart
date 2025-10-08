@@ -31,6 +31,15 @@ final List <Widget> pages =[
       bottomNavigationBar: Bottomnav(
         onTap:(index) => navigateBottomBar(index),
       ),
+      appBar: AppBar(
+        leading:Builder(
+          builder: (context) => IconButton(onPressed: () {
+          Scaffold.of(context).openDrawer();
+        }, 
+        icon: Icon(Icons.menu,color: Colors.black,)),
+      ), 
+      ),
+      drawer: Drawer(),
       body: pages[selectedIndex],//this will take you to the pages when you press the bottom nav
     );
   }
