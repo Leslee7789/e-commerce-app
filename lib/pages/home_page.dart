@@ -39,7 +39,27 @@ final List <Widget> pages =[
         icon: Icon(Icons.menu,color: Colors.black,)),
       ), 
       ),
-      drawer: Drawer(),
+      drawer: Drawer(
+        backgroundColor: Colors.white,
+        child: Column(
+          children: [
+            DrawerHeader(child: Image.asset('lib/images/swoosh.png')),
+            
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Home'),
+            ),
+              ListTile(
+              leading: Icon(Icons.info),
+              title: Text('About'),
+            ),
+             ListTile(
+              leading: Icon(Icons.logout),
+              title: Text('Logout'),
+            ),
+          ],
+        ),
+      ),
       body: pages[selectedIndex],//this will take you to the pages when you press the bottom nav
     );
   }
