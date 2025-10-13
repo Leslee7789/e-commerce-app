@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/pages/shoe_tile.dart';
 import 'package:flutter/material.dart';
 
 class ShopPage extends StatelessWidget {
@@ -35,7 +36,9 @@ class ShopPage extends StatelessWidget {
         SizedBox(height: 10,),
         Expanded(
           child: ListView.builder(itemBuilder: (context, index) {
-            return ShoeTile();
+            return ShoeTile(
+              
+            );
           },),
           ),
       ],
